@@ -1,3 +1,4 @@
+#+ endpoint: http://lod.cedar-project.nl/cedar-mini/sparql
 #+ summary: Number of houses of type 2-72 over the years
 #+ tags: 
 #+   - houses
