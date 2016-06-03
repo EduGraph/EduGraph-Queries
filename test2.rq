@@ -2,5 +2,8 @@
 #+ tags: 
 #+   - houses
 
-PREFIX schema: <http://schema.org/>
-SELECT DISTINCT * WHERE { ?universityURI a schema:CollegeOrUniversity. }
+PREFIX qb: <http://purl.org/linked-data/cube#>
+
+SELECT DISTINCT ?year (SUM(?pop) AS ?houses) FROM <urn:graph:cedar-mini:release> WHERE {
+	?obs a qb:Observation .
+}
