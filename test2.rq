@@ -1,7 +1,7 @@
-#+ endpoint: http://fbwsvcdev.fh-brandenburg.de:8080/fuseki/EduGraph/
+#+ endpoint: http://fbwsvcdev.fh-brandenburg.de:8080/fuseki/EduGraph
 #+ summary: test2
 #+ tags: 
-#+   - houses
+#+   - edugraph
 
 PREFIX schema: <http://schema.org/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -22,4 +22,5 @@ PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 
 SELECT DISTINCT * WHERE {
 	?universityURI a schema:CollegeOrUniversity.
+	?universityURI schema:url ?universityHomepage.
 }
