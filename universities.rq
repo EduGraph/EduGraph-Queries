@@ -1,6 +1,7 @@
-#+ summary: Universities and there metadata, inklusive study programs
+#+ summary: Display universities and there metadata as well as the study program
 #+ tags: 
-#+   - universities
+#+   - universtiies
+#+   - edugraph
 
 
 PREFIX schema: <http://schema.org/>
