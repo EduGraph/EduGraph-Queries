@@ -1,5 +1,5 @@
 #+ endpoint: http://fbwsvcdev.fh-brandenburg.de:8080/fuseki/EduGraph/
-#+ summary: Number of houses of type 2-72 over the years
+#+ summary: test2
 #+ tags: 
 #+   - houses
 
