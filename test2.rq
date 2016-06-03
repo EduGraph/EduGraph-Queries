@@ -3,7 +3,4 @@
 #+   - houses
 
 PREFIX schema: <http://schema.org/>
-
-SELECT DISTINCT * WHERE {
-    ?universityURI a schema:CollegeOrUniversity.
-}
+SELECT DISTINCT * WHERE { ?universityURI a schema:CollegeOrUniversity. }
