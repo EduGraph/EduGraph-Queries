@@ -1,9 +1,0 @@
-#+ summary: Test2
-#+ tags: 
-#+   - houses
-
-PREFIX qb: <http://purl.org/linked-data/cube#>
-
-SELECT DISTINCT ?year (SUM(?pop) AS ?houses) FROM <urn:graph:cedar-mini:release> WHERE {
-	?obs a qb:Observation .
-}
