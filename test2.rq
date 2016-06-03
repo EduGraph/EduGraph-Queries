@@ -27,6 +27,6 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 
-SELECT * WHERE {
-	?a ?b ?c
+SELECT DISTINCT * WHERE {
+	?universityURI a schema:CollegeOrUniversity.
 }
