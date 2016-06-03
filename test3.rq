@@ -26,6 +26,6 @@ SELECT DISTINCT * WHERE {
 	?universityURI schema:location ?universityLocationURI.
         ?universityURI schema:geo ?universityGeoCoordinates.
             	
-    	?universityGeoCoordinates schema:latitude ?universityLatitude;
-        schema:longitude ?universityLongitude.
+    	?universityGeoCoordinates schema:latitude ?universityLatitude.
+        ?universityGeoCoordinates schema:longitude ?universityLongitude.
 }
