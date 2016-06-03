@@ -1,5 +1,3 @@
-
-
 #+ endpoint: http://fbwsvcdev.fh-brandenburg.de:8080/fuseki/EduGraph
 #+ summary: test2
 #+ tags: 
@@ -27,4 +25,7 @@ SELECT DISTINCT * WHERE {
 	?universityURI schema:url ?universityHomepage.
 	?universityURI schema:location ?universityLocationURI.
         ?universityURI schema:geo ?universityGeoCoordinates.
+            	
+    	?universityGeoCoordinates schema:latitude ?universityLatitude;
+        schema:longitude ?universityLongitude.
 }
