@@ -28,11 +28,7 @@ SELECT DISTINCT * WHERE {
             	
     	?universityGeoCoordinates schema:latitude ?universityLatitude.
         ?universityGeoCoordinates schema:longitude ?universityLongitude.
-        
-        OPTIONAL {
-                ?universityURI dbpedia-owl:thumbnail ?universitythumbnail.
-        }
-	
+
         ?degreeProgramURI a bise:BISEBachelor.
         ?degreeProgramURI schema:provider ?universityURI.
         ?degreeProgramURI bise:bisePillar ?degreeProgramPillars.
