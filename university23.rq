@@ -26,10 +26,10 @@ WHERE {
     schema:name ?universityLabel_lang; 
     schema:url ?universityHomepage; 
     schema:location ?universityLocationURI; 
-    schema:geo [
-      schema:latitude   ?universityLocationLatitude;
+    schema:geo ?universityGeoCoordinates.
+    
+    ?universityGeoCoordinates schema:latitude ?universityLocationLatitude;
       schema:longitude  ?universityLocationLongitude.
-    ] .
     
   ?universityGeoCoordinates schema:latitude ?universityLatitude;  
     schema:longitude ?universityLongitude.  
