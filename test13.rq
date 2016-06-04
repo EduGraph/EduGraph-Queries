@@ -55,7 +55,11 @@ SELECT DISTINCT * WHERE {
 	BIND (str(?universityLabel_lang) AS ?universityLabel)
 	
 	FILTER (langMatches(lang(?universityLocationLabel_lang),"de"))
-	BIND (str(?universityLocationLabel_lang) AS ?universityLocationLabel)	
+	BIND (str(?universityLocationLabel_lang) AS ?universityLocationLabel)
+	
+	OPTIONAL{
+		?universityURI dbpedia-owl:thumbnail ?universitythumbnail.
+	}
 
 	
 }
