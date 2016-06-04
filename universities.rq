@@ -1,4 +1,3 @@
-#+ endpoint: http://fbwsvcdev.fh-brandenburg.de:8080/fuseki/EduGraph
 #+ summary: Display EduGraph universities with there metadata and respective study programs
 #+ tags: 
 #+   - Universities
