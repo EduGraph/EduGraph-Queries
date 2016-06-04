@@ -21,12 +21,13 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 
 SELECT DISTINCT * WHERE {
-	?universityURI a schema:CollegeOrUniversity.
-	?universityURI schema:url ?universityHomepage.
-	?universityURI schema:location ?universityLocationURI.
-	?universityURI schema:geo ?universityGeoCoordinates.
-	?universityGeoCoordinates schema:latitude ?universityLatitude.
-	?universityGeoCoordinates schema:longitude ?universityLongitude.
+	?universityURI a schema:CollegeOrUniversity;
+		schema:url ?universityHomepage;
+		schema:location ?universityLocationURI;
+		schema:geo ?universityGeoCoordinates.
+		
+	?universityGeoCoordinates schema:latitude ?universityLatitude;
+		schema:longitude ?universityLongitude.
 	
 	?degreeProgramURI a bise:BISEBachelor;
 		schema:provider ?universityURI;
