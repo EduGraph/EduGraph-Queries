@@ -28,7 +28,7 @@ WHERE {
     schema:location ?universityLocationURI; 
     schema:geo [
       schema:latitude   ?universityLocationLatitude;
-      schema:longitude  ?universityLocationLongitude;
+      schema:longitude  ?universityLocationLongitude.
     ] .
     
   ?universityGeoCoordinates schema:latitude ?universityLatitude;  
