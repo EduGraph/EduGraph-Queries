@@ -1,7 +1,8 @@
 #+ endpoint: http://fbwsvcdev.fh-brandenburg.de:8080/fuseki/EduGraph
-#+ summary: test2
+#+ summary: Display EduGraph universities with there metadata and respective study programs
 #+ tags: 
-#+   - edugraph
+#+   - Universities
+#+   - Study program
 
 PREFIX schema: <http://schema.org/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
