@@ -19,10 +19,10 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX geo:<http://www.w3.org/2003/01/geo/wgs84_pos#>  
                   
 SELECT DISTINCT
-  ?universityLabel ?universityHomepage 
+  ?_university ?universityLabel ?universityHomepage 
   ?universityLocationURI ?universityLocationLabel ?universityLocationLatitude ?universityLocationLongitude
 WHERE {
-  < ?_university_iri > a schema:CollegeOrUniversity; 
+  ?_university_iri a schema:CollegeOrUniversity; 
     schema:name ?universityLabel_lang; 
     schema:url ?universityHomepage; 
     schema:location ?universityLocationURI; 
@@ -32,7 +32,7 @@ WHERE {
     schema:longitude ?universityLongitude.  
                
   OPTIONAL { 
-    < ?_university_iri > dbpedia-owl:thumbnail ?universitythumbnail.
+    ?_university_iri dbpedia-owl:thumbnail ?universitythumbnail.
   }                  
   BIND (str(?universityLabel_lang) AS ?universityLabel) 
   ?universityLocationURI schema:name ?universityLocationLabel_lang.
