@@ -24,7 +24,10 @@ SELECT DISTINCT * WHERE {
 	?universityURI a schema:CollegeOrUniversity.
 	?universityURI schema:url ?universityHomepage.
 	?universityURI schema:location ?universityLocationURI.
-        ?universityURI schema:geo ?universityGeoCoordinates.
-        ?universityGeoCoordinates schema:latitude ?universityLatitude.
-        ?universityGeoCoordinates schema:longitude ?universityLongitude.
+	?universityURI schema:geo ?universityGeoCoordinates.
+	?universityGeoCoordinates schema:latitude ?universityLatitude.
+	?universityGeoCoordinates schema:longitude ?universityLongitude.
+	OPTIONAL {
+        	?universityURI dbpedia-owl:thumbnail ?universitythumbnail;
+    	}
 }
