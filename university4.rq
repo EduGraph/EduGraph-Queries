@@ -22,9 +22,7 @@ SELECT DISTINCT
   ?universityURI ?universityLabel ?universityHomepage 
   ?universityLocationURI ?universityLocationLabel ?universityLocationLatitude ?universityLocationLongitude
 {
-  VALUES ?universityURI {  
-    ?university_iri
-  } 
+
   ?universityURI a schema:CollegeOrUniversity; 
     schema:name ?universityLabel_lang; 
     schema:url ?universityHomepage; 
