@@ -18,7 +18,13 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX wikibase: <http://wikiba.se/ontology#>  
 PREFIX geo:<http://www.w3.org/2003/01/geo/wgs84_pos#>  
                   
-SELECT DISTINCT * {  
+SELECT DISTINCT
+  ?universityURI ?universityLabel ?universityHomepage 
+  ?universityLocationURI ?universityLocationLabel ?universityLocationLatitude ?universityLocationLongitude
+{
+  VALUES ?universityURI {  
+    ?_university_iri
+  } 
   ?universityURI a schema:CollegeOrUniversity; 
     schema:name ?universityLabel_lang; 
     schema:url ?universityHomepage; 
