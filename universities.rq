@@ -20,7 +20,13 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 
-SELECT DISTINCT * WHERE {
+SELECT DISTINCT 
+	?universityURI ?universityLabel ?universityHomepage 
+	universityLatitude ?universityLongitude ?universityLocationURI ?universityLocationLabel 
+	?degreeProgramURI ?degreeProgramLabel ?degreeProgramHomepage ?degreeProgramCreditPoints ?degreeProgramPeriodOfStudy
+	?degreeProgramBAMPillar ?degreeProgramBISPillar ?degreeProgramCSCPillar ?degreeProgramRankingCHE
+	?degreeProgramJobADM ?degreeProgramJobCON ?degreeProgramJobINF ?degreeProgramJobITM ?degreeProgramJobSWE
+WHERE {
 	?universityURI a schema:CollegeOrUniversity;
 		schema:name ?universityLabel_lang;
 		schema:url ?universityHomepage;
@@ -60,6 +66,4 @@ SELECT DISTINCT * WHERE {
 	OPTIONAL{
 		?universityURI dbpedia-owl:thumbnail ?universitythumbnail.
 	}
-
-	
 }
