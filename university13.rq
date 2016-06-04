@@ -32,7 +32,7 @@ WHERE {
     schema:longitude ?universityLongitude.  
                
   OPTIONAL { 
-    ?_university dbpedia-owl:thumbnail ?universitythumbnail.
+    <?_university> dbpedia-owl:thumbnail ?universitythumbnail.
   }                  
   BIND (str(?universityLabel_lang) AS ?universityLabel) 
   ?universityLocationURI schema:name ?universityLocationLabel_lang.
