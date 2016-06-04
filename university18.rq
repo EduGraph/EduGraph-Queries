@@ -22,7 +22,7 @@ SELECT DISTINCT
   ?universityLabel ?universityHomepage 
   ?universityLocationURI ?universityLocationLabel ?universityLocationLatitude ?universityLocationLongitude
 WHERE {
-?_name1_iri ?x ?y
+?_name1_iri ?x ?y.
   ?_name2 a schema:CollegeOrUniversity; 
     schema:name ?universityLabel_lang; 
     schema:url ?universityHomepage; 
