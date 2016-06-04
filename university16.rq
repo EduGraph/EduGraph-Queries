@@ -22,8 +22,7 @@ SELECT DISTINCT
   ?universityLabel ?universityHomepage 
   ?universityLocationURI ?universityLocationLabel ?universityLocationLatitude ?universityLocationLongitude
 WHERE {
-  # ?_university
-  <?_university> a schema:CollegeOrUniversity; 
+  ?_name a schema:CollegeOrUniversity; 
     schema:name ?universityLabel_lang; 
     schema:url ?universityHomepage; 
     schema:location ?universityLocationURI; 
@@ -33,7 +32,7 @@ WHERE {
     schema:longitude ?universityLongitude.  
                
   OPTIONAL { 
-    <?_university> dbpedia-owl:thumbnail ?universitythumbnail.
+    ?__name dbpedia-owl:thumbnail ?universitythumbnail.
   }                  
   BIND (str(?universityLabel_lang) AS ?universityLabel) 
   ?universityLocationURI schema:name ?universityLocationLabel_lang.
