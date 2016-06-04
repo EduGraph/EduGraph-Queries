@@ -56,10 +56,10 @@ WHERE {
 	BIND(((?degreeProgramBAMPillar+?degreeProgramBISPillar)/2) AS ?degreeProgramJobITM)
 	BIND((?degreeProgramCSCPillar) AS ?degreeProgramJobSWE)	
 
-	FILTER (langMatches(lang(?universityLabel_lang),"de"))
+	#FILTER (langMatches(lang(?universityLabel_lang),"de"))
 	BIND (str(?universityLabel_lang) AS ?universityLabel)
 	
-	FILTER (langMatches(lang(?universityLocationLabel_lang),"de"))
+	#FILTER (langMatches(lang(?universityLocationLabel_lang),"de"))
 	BIND (str(?universityLocationLabel_lang) AS ?universityLocationLabel)
 	
 	OPTIONAL{
