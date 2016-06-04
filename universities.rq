@@ -1,7 +1,6 @@
 #+ summary: Display EduGraph universities with there metadata and respective study programs
 #+ tags: 
-#+   - Universities
-#+   - Study program
+#+   - EduGraph
 
 PREFIX schema: <http://schema.org/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
