@@ -40,5 +40,7 @@ SELECT DISTINCT * WHERE {
 	?degreeProgramPillars bise:pillarBAM ?degreeProgramBAMPillar;
 		bise:pillarBIS ?degreeProgramBISPillar;
 		bise:pillarCSC ?degreeProgramCSCPillar.
+		
+	?universityLocationURI schema:name ?universityLocationLabel_lang.
 	
 }
