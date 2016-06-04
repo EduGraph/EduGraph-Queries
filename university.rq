@@ -1,6 +1,6 @@
 #+ summary: Display metadata of a University
 #+ tags: 
-#+   - Universities
+#+   - EduGraph
 
 PREFIX schema: <http://schema.org/>  
 PREFIX dcterms: <http://purl.org/dc/terms/>  
