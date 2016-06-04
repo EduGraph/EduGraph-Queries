@@ -22,6 +22,7 @@ PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 
 SELECT DISTINCT * WHERE {
 	?universityURI a schema:CollegeOrUniversity;
+		schema:name ?universityLabel_lang;
 		schema:url ?universityHomepage;
 		schema:location ?universityLocationURI;
 		schema:geo ?universityGeoCoordinates.
@@ -43,6 +44,13 @@ SELECT DISTINCT * WHERE {
 		
 	?universityLocationURI schema:name ?universityLocationLabel_lang.
 	
+
+	BIND((?degreeProgramCSCPillar) AS ?degreeProgramJobADM)
+	BIND(((?degreeProgramBAMPillar+?degreeProgramBISPillar)/2) AS ?degreeProgramJobCON)
+	BIND((?degreeProgramCSCPillar) AS ?degreeProgramJobINF)
+	BIND(((?degreeProgramBAMPillar+?degreeProgramBISPillar)/2) AS ?degreeProgramJobITM)
+	BIND((?degreeProgramCSCPillar) AS ?degreeProgramJobSWE)	
+
 	FILTER (langMatches(lang(?universityLabel_lang),"de"))
 	BIND (str(?universityLabel_lang) AS ?universityLabel)
 	
