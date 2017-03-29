@@ -59,12 +59,12 @@ WHERE {
 	BIND ( IF (?BamBisMinCalc > 1 ,
       		1,
       		?BamBisMinCalc
-  		 ) AS ?degreeProgramBAMPBISPillarCalc )
+  		 ) AS ?degreeProgramBAMBISPillarCalc )
     
     	BIND( ?degreeProgramCSCPillarCalc AS ?degreeProgramJobADM)
-	BIND( ?degreeProgramBAMPBISPillarCalc AS ?degreeProgramJobCON)
+	BIND( ?degreeProgramBAMBISPillarCalc AS ?degreeProgramJobCON)
 	BIND( ?degreeProgramCSCPillarCalc AS ?degreeProgramJobINF)
-	BIND( ?degreeProgramBAMPBISPillarCalc AS ?degreeProgramJobITM)
+	BIND( ?degreeProgramBAMBISPillarCalc AS ?degreeProgramJobITM)
 	BIND( ?degreeProgramCSCPillarCalc AS ?degreeProgramJobSWE)
 
 	#FILTER (langMatches(lang(?universityLabel_lang),"de"))
